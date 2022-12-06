@@ -19,5 +19,15 @@ module.exports = {
             console.error(err);
             res.status(500).json(err);
         }
-    }
+    },
+
+    async createUser(req, res) {
+        try {
+            const userData = await User.create(req.body);
+            res.status(200).json(userData);
+        } catch (err) {
+            console.error(err);
+            res.status(500).json(err);
+        }
+    },
 }
