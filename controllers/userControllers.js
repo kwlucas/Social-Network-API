@@ -1,7 +1,7 @@
 const { User, Thought } = require("../models");
 
 module.exports = {
-    async getUsers(req, res) {
+    async getAllUsers(req, res) {
         try {
             const userData = await User.find();
             userData ? res.status(200).json(userData) : res.status(404).json({ message: 'No data found!' });
