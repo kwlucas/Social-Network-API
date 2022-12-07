@@ -1,10 +1,10 @@
 # Social-Network-API
 MongoDB based API for a social network like site.
 
-If you are grading me on this assignment great job on getting to this quickly. I would normally have much more to offer you, but in the fog of final projects I somehow found myself finishing this assignment just before the supposed deadline for all assignements.
+If you are grading me on this assignment great job on getting to this quickly. I would normally have much more to offer you, but in the fog of final projects I somehow found myself finishing this assignment just before the supposed deadline.
 
-The code in the repository should work just fine although I only lightly tested them. I was already up late last night preparing to present my final project today and am now running on fumes as it seems I am up working late for the second night in a row and out fear of not meeting graduation requirements I am going to go ahead and submit it.
+The code in the repository will work just fine and should meet all the requirements of the assignement. Even so I do plan on finishing and fully flushing out this assignment with a high quality readme and bonus objectives, so I appriciate any feedback you can give. I simply do not have the time to flush it out and then submit it, so I am submiting it in this state.
 
-Sorry for the lack of a video, and any trouble it caused you. Thanks for your hard work and the awesome feedback you have been providing throughout the course.
+Sorry for the lack of a demo video and a proper readme, and any trouble it may have caused you. Thanks for your hard work and the awesome feedback you have been providing throughout the course.
 
 -Kyle Lucas
