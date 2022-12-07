@@ -1,33 +1,5 @@
 const { Schema, model, Types } = require('mongoose');
 
-const thoughtSchema = new Schema({
-    thoughtText: {
-        type: String,
-        required: true,
-        minlength: 1,
-        maxlength: 280,
-    },
-    createdAt: {
-        type: Date,
-        default: Date.now,
-        get: setDate,
-    },
-    username: {
-        type: String,
-        required: true
-    },
-    reactions: [
-        reactionSchema
-    ],
-}, {
-    toJSON: {
-        virtuals: true,
-        getters: true,
-    },
-    id: false,
-}
-);
-
 const reactionSchema = new Schema(
     {
         reactionId: {
@@ -55,6 +27,34 @@ const reactionSchema = new Schema(
         },
         _id: false,
     }
+);
+
+const thoughtSchema = new Schema({
+    thoughtText: {
+        type: String,
+        required: true,
+        minlength: 1,
+        maxlength: 280,
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now,
+        get: setDate,
+    },
+    username: {
+        type: String,
+        required: true
+    },
+    reactions: [
+        reactionSchema
+    ],
+}, {
+    toJSON: {
+        virtuals: true,
+        getters: true,
+    },
+    id: false,
+}
 );
 
 function setDate(timestamp) {
