@@ -40,11 +40,24 @@ module.exports = {
             res.status(500).json(err);
         }
     },
-    
+
     async deleteUser(req, res) {
         try {
             const userData = await User.findByIdAndDelete(req.params.userId);
             res.status(200).json(userData);
+        } catch (err) {
+            console.error(err);
+            res.status(500).json(err);
+        }
+    },
+
+    async addFriend(req, res) {
+        try {
+            //Add the new friend's id to the user's firend list
+            const userData = await User.findByIdAndUpdate(req.params.userId, { $addToSet: { friends: req.params.friendId } });
+            //Add the user's id to the new friend's friend list
+            const friendData = await User.findByIdAndUpdate(req.params.friendId, { $addToSet: { friends: req.params.userId } });
+            res.status(200).json(userData, friendData);
         } catch (err) {
             console.error(err);
             res.status(500).json(err);
