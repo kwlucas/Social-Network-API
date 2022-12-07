@@ -32,4 +32,14 @@ module.exports = {
             res.status(500).json(err);
         }
     },
+
+    async updateThought(req, res) {
+        try {
+            const thoughtData = await Thought.findByIdAndUpdate(req.params.thoughtId, req.body);
+            res.status(200).json(thoughtData);
+        } catch (err) {
+            console.error(err);
+            res.status(500).json(err);
+        }
+    },
 }
