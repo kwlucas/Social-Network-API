@@ -30,4 +30,14 @@ module.exports = {
             res.status(500).json(err);
         }
     },
+
+    async updateUser(req, res) {
+        try {
+            const userData = await User.findByIdAndUpdate(req.params.userId, req.body);
+            res.status(200).json(userData);
+        } catch (err) {
+            console.error(err);
+            res.status(500).json(err);
+        }
+    }
 }
